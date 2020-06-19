@@ -6,11 +6,11 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>Hello world</h1>
-        <Button>Button</Button>
+        <Button className="custom">Button</Button>
         <Button disabled>Disabled Button</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Large Button</Button>
         <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>Small Button</Button>
-        <Button btnType={ButtonType.Link} size={ButtonSize.Large} href="https://wwww.baidu.com">Baidu Link</Button>
+        <Button btnType={ButtonType.Link} size={ButtonSize.Large} href="https://wwww.baidu.com" target="_blank">Baidu Link</Button>
         <Button disabled btnType={ButtonType.Link} size={ButtonSize.Small} href="https://wwww.baidu.com">Disabled Baidu Link</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
