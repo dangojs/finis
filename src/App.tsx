@@ -2,15 +2,25 @@ import React from 'react';
 import Button, { ButtonType, ButtonSize } from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SubMenu from './components/Menu/subMenu';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
         <Menu defaultIndex={0} onSelect={(index) => { alert(index) }}>
-          <MenuItem index={0}>cool link 0</MenuItem>
-          <MenuItem index={1} disabled>cool link 1</MenuItem>
-          <MenuItem index={2}>cool link 2</MenuItem>
+          <MenuItem>cool link 0</MenuItem>
+          <SubMenu title="dropdown">
+            <MenuItem>
+              dropdown 0
+            </MenuItem>
+            <MenuItem>
+              dropdown 1
+            </MenuItem>
+          </SubMenu>
+          <MenuItem>
+            cool link 2
+          </MenuItem>
         </Menu>
         <h1>Hello world</h1>
         <Button className="custom">Button</Button>
