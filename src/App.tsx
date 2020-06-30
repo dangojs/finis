@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Menu defaultIndex={0} onSelect={(index) => { alert(index) }}>
+        <Menu mode="vertical" defaultIndex="0" onSelect={(index) => { alert(index) }} defaultOpenSubMenus={['1']}>
           <MenuItem>cool link 0</MenuItem>
           <SubMenu title="dropdown">
             <MenuItem>
