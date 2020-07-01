@@ -3,11 +3,16 @@ import Button, { ButtonType, ButtonSize } from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import Icon from './components/Icon/icon';
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(fas);
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <Icon icon="arrow-down" theme="primary" size="10x" />
         <Menu mode="vertical" defaultIndex="0" onSelect={(index) => { alert(index) }} defaultOpenSubMenus={['1']}>
           <MenuItem>cool link 0</MenuItem>
           <SubMenu title="dropdown">
